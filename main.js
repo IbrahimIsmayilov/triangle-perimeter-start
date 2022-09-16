@@ -15,15 +15,17 @@ function btnClicked() {
 
     // Process
     let AB = dist(xA, yA, xB, yB);
+    let AC = dist(xA, yA, xC, yC);
+    let BC = dist(xA, yA, xB, yB);
 
     // Output
     document.getElementById('AB-Value').innerHTML = AB;
-    document.getElementById('AC-Value').innerHTML = dist(xA, yA, xC, yC);
-    document.getElementById('BC-Value').innerHTML = dist(xA, yA, xB, yB);
+    document.getElementById('AC-Value').innerHTML = AC;
+    document.getElementById('BC-Value').innerHTML = BC;
+    document.getElementById("Perimeter-Value").innerHTML = AB + AC + BC;
 }
 
 function dist(x1, y1, x2, y2) {
-    let distance;
-    distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+    let distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
     return distance;
 }
